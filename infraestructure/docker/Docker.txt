@@ -1,0 +1,20 @@
+-- Postgres
+-------------------------------------------
+docker pull postgres
+docker run --name pgsql-dev -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres
+docker exec -it pgsql-dev bash
+psql -h localhost -U postgres 
+
+-- Pgadmin
+-------------------------------------------
+
+docker pull dpage/pgadmin4
+
+docker run --name pgadmin4-dev -p 8081:80 -e "PGADMIN_DEFAULT_EMAIL=anovoa@galaxy.edu.pe" -e "PGADMIN_DEFAULT_PASSWORD=123456" -d dpage/pgadmin4
+
+-- Conexion
+docker inspect pgsql-dev
+
+"Networks": {  "IPAddress": "172.17.0.2",..}
+
+ 

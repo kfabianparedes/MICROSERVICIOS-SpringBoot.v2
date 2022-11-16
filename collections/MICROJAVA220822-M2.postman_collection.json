@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "b6120a32-a34d-4adc-8f9d-22b45a914859",
+		"name": "MICROJAVA220822-M2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "accouts",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9010/accounts/findAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"accounts",
+								"findAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "guardar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"numAccount\": \"c96325881\",\r\n        \"type\": \"personal\",\r\n        \"customerId\": 11,\r\n        \"limitTransaction\": 100000,\r\n        \"commissionAmount\": 1.5,\r\n        \"availableBalance\": 20000.0,\r\n        \"createAt\": \"2022-11-10\",\r\n        \"updateUp\": \"2022-11-10\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9010/accounts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"accounts",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/customers/findAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"customers",
+								"findAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "gateway",
+			"item": [
+				{
+					"name": "customer",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9095/api/customer/customers/findAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9095",
+									"path": [
+										"api",
+										"customer",
+										"customers",
+										"findAll"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "accounts",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9095/api/account/accounts/findAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9095",
+									"path": [
+										"api",
+										"account",
+										"accounts",
+										"findAll"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
